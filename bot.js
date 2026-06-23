@@ -9,6 +9,7 @@ console.log("TOKEN:", process.env.BOT_TOKEN ? "токен найден" : "то�
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
+
 bot.start(async (ctx) => {
   await ctx.reply(
     "Куда хочешь попасть?",
@@ -24,11 +25,16 @@ bot.start(async (ctx) => {
           "Страница Горбачёва",
           "https://serene-parfait-455b7e.netlify.app/?teacher=gorbachev&screen=home"
         )
+      ],
+      [
+        Markup.button.webApp(
+          "Купить курс",
+          "https://foxford.ru/checkout/2nn4x9"
+        )
       ]
     ])
   );
 });
-
 bot.launch();
 
 console.log("Бот запущен");
