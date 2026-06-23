@@ -23,11 +23,6 @@ bot.start(async (ctx) => {
   );
 });
 
-bot.on("message", (ctx) => {
-  console.log("Пришло сообщение:", ctx.message.text);
-  ctx.reply("Я получил сообщение ✅");
-});
-
 bot.launch();
 
 console.log("Бот запущен");
